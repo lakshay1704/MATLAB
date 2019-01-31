@@ -1,0 +1,208 @@
+%complex numbers
+z = 5+6j
+
+z =
+
+   5.0000 + 6.0000i
+
+% real part of z
+real(z)
+
+ans =
+
+     5
+
+%complex part of z
+%imaginary part of z
+imag(z)
+
+ans =
+
+     6
+
+isreal(z)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+a = 6
+
+a =
+
+     6
+
+isreal(a)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+%magnitude of a complex number
+abs(z)
+
+ans =
+
+    7.8102
+
+%conjugate of the complex number
+conj(z)
+
+ans =
+
+   5.0000 - 6.0000i
+
+z
+
+z =
+
+   5.0000 + 6.0000i
+
+%argument of z
+angle(z)
+
+ans =
+
+    0.8761
+
+clear all
+z1 = 12 + 6j;
+z2 = 6 +12j;
+if z1 == z2
+disp('true')
+else
+disp('false')
+end
+false
+if z1<=z2
+disp('z1 is less')
+else
+disp('z2 is less')
+end
+z2 is less
+z1+z2
+
+ans =
+
+  18.0000 +18.0000i
+
+z1-z2
+
+ans =
+
+   6.0000 - 6.0000i
+
+z1/z2
+
+ans =
+
+   0.8000 - 0.6000i
+
+z1*z2
+
+ans =
+
+   0.0000e+00 + 1.8000e+02i
+
+z1~=z2
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+%complex plots
+x = []
+
+x =
+
+     []
+
+for m 1:10
+ for m 1:10
+       
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To
+construct matrices, use brackets instead of parentheses.
+} 
+for m=1:10
+x(1,m) = m+2*mj
+end
+{Undefined function or variable 'mj'.
+} 
+for m=1:10
+x(1,m) = m+2*mj
+end
+{Undefined function or variable 'mj'.
+} 
+for m=1:10
+x(1,m) = m+(2*mj)
+end
+{Undefined function or variable 'mj'.
+} 
+for m=1:10
+x(1,m) = m+(2*m)j
+ x(1,m) = m+(2*m)j
+                 
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To
+construct matrices, use brackets instead of parentheses.
+} 
+for m=1:10
+x(1,m) = m+2j
+end
+
+for m = 1:10
+x(1,m) = m+2j;
+end
+x
+
+x =
+
+  Columns 1 through 6
+
+   1.0000 + 2.0000i   2.0000 + 2.0000i   3.0000 + 2.0000i   4.0000 + 2.0000i   5.0000 + 2.0000i   6.0000 + 2.0000i
+
+  Columns 7 through 10
+
+   7.0000 + 2.0000i   8.0000 + 2.0000i   9.0000 + 2.0000i  10.0000 + 2.0000i
+
+plot(real(x),x)
+[Warning: Imaginary parts of complex X and/or Y arguments ignored] 
+plot(real(x),imag(x))
+plot(real(x),imag(x))
+diary off
+z1 = 2 + 6j
+
+z1 =
+
+   2.0000 + 6.0000i
+
+polar(z)
+{Undefined function or variable 'z'.
+} 
+polar(z1)
+[Warning: Imaginary parts of complex X and/or Y arguments ignored] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polar', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\graph2d\polar.m', 235)" style="font-weight:bold">polar</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\graph2d\polar.m',235,0)">line 235</a>)] 
+clear all
+clc
+for m = 1:10
+x(1,m) = m+2j;
+end
+x
+
+x =
+
+  Columns 1 through 6
+
+   1.0000 + 2.0000i   2.0000 + 2.0000i   3.0000 + 2.0000i   4.0000 + 2.0000i   5.0000 + 2.0000i   6.0000 + 2.0000i
+
+  Columns 7 through 10
+
+   7.0000 + 2.0000i   8.0000 + 2.0000i   9.0000 + 2.0000i  10.0000 + 2.0000i
+
+polar(real(x),imag(x))
+diary off

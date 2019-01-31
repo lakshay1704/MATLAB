@@ -1,0 +1,77 @@
+%transpose of the matrix%
+a
+
+a =
+
+     9     8     7     6
+     6     7     8     9
+
+a'
+
+ans =
+
+     9     6
+     8     7
+     7     8
+     6     9
+
+sum(a')'
+
+ans =
+
+    30
+    30
+
+diag(a)
+
+ans =
+
+     9
+     7
+
+%matlab help%
+help plot
+ <strong>plot</strong>   Linear plot. 
+    <strong>plot</strong>(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
+    then the vector is plotted versus the rows or columns of the matrix,
+    whichever line up.  If X is a scalar and Y is a vector, disconnected
+    line objects are created and plotted as discrete points vertically at
+    X.
+ 
+    <strong>plot</strong>(Y) plots the columns of Y versus their index.
+    If Y is complex, <strong>plot</strong>(Y) is equivalent to <strong>plot</strong>(real(Y),imag(Y)).
+    In all other uses of <strong>plot</strong>, the imaginary part is ignored.
+
+clear a1
+clear a2
+clear ans
+x
+
+x =
+
+   1.0e+03 *
+
+    0.0100    0.0316    0.1000    0.3162    1.0000
+
+zer=zeros(5,5)
+
+zer =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+diary off
+clear all
+x=[0:pi/2:10]
+
+x =
+
+         0    1.5708    3.1416    4.7124    6.2832    7.8540    9.4248
+
+plot(x,sin(x))
+plot(x,cos(x))
+plot(x,sin(x))
+diary off

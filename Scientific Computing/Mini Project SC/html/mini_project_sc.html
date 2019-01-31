@@ -1,0 +1,352 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>mini_project_sc</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-10-03"><meta name="DC.source" content="mini_project_sc.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="comment">%Mini Project</span>
+
+<span class="comment">%Airline Ticket Booking</span>
+
+<span class="comment">%BY LAKSHAY EEE 3rd Semester</span>
+
+
+disp(<span class="string">"Welcome"</span>)
+disp(<span class="string">"Press any key to continue"</span>)
+pause()
+place = menu(<span class="string">'Select Destination'</span>,<span class="string">'North America'</span>,<span class="string">'South America'</span>,<span class="string">'Asia'</span>,<span class="string">'Europe'</span>,<span class="string">'Australlia'</span>,<span class="string">'Stay Home'</span>)
+
+<span class="keyword">switch</span> place
+
+    <span class="keyword">case</span> 1
+
+        disp(<span class="string">"You clicked on North America"</span>)
+        [x,y] = xlsread(<span class="string">'North America.xlsx'</span>)
+        prompt = {<span class="string">'Enter company name'</span>,<span class="string">'Enter class'</span>,<span class="string">'Enter your current place'</span>,<span class="string">'enter number of tickets'</span>,<span class="string">'enter price'</span>};
+        title = <span class="string">'Details'</span>;
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+
+        <span class="comment">%com = input('enter comapny name --&gt; ','s')</span>
+        <span class="comment">%cls = input('enter class --&gt; ','s')</span>
+        <span class="comment">%fr = input('enter your current place --&gt; ','s')</span>
+        <span class="comment">%n = input('enter number of tickets --&gt; ')</span>
+        <span class="comment">%prc = input('enter price --&gt; ')</span>
+
+        cost(n,prc);
+
+    <span class="keyword">case</span> 2
+
+        disp(<span class="string">"You clicked on South America"</span>)
+        [x,y] = xlsread(<span class="string">'South America.xlsx'</span>)
+
+         prompt = {<span class="string">'Enter company name'</span>,<span class="string">'Enter class'</span>,<span class="string">'Enter your current place'</span>,<span class="string">'enter number of tickets'</span>,<span class="string">'enter price'</span>};
+        title = <span class="string">'Details'</span>;
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+
+
+        cost(n,prc);
+
+    <span class="keyword">case</span> 3
+
+        disp(<span class="string">"You clicked on Asia"</span>)
+        [x,y] = xlsread(<span class="string">'Asia.xlsx'</span>)
+
+
+         prompt = {<span class="string">'Enter company name'</span>,<span class="string">'Enter class'</span>,<span class="string">'Enter your current place'</span>,<span class="string">'enter number of tickets'</span>,<span class="string">'enter price'</span>};
+        title = <span class="string">'Details'</span>;
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+
+        cost(n,prc);
+
+    <span class="keyword">case</span> 4
+
+        disp(<span class="string">"You clicked on Europe"</span>)
+        [x,y] = xlsread(<span class="string">'Europe.xlsx'</span>)
+
+         prompt = {<span class="string">'Enter company name'</span>,<span class="string">'Enter class'</span>,<span class="string">'Enter your current place'</span>,<span class="string">'enter number of tickets'</span>,<span class="string">'enter price'</span>};
+        title = <span class="string">'Details'</span>;
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+
+        cost(n,prc);
+
+    <span class="keyword">case</span> 5
+
+        disp(<span class="string">"You clicked on Australlia"</span>)
+        [x,y] = xlsread(<span class="string">'Australlia.xlsx'</span>)
+
+         prompt = {<span class="string">'Enter company name'</span>,<span class="string">'Enter class'</span>,<span class="string">'Enter your current place'</span>,<span class="string">'enter number of tickets'</span>,<span class="string">'enter price'</span>};
+        title = <span class="string">'Details'</span>;
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+
+        cost(n,prc);
+
+    <span class="keyword">case</span> 6
+
+        error(<span class="string">'You are staying Home'</span>)
+
+    <span class="keyword">otherwise</span>
+
+        error(<span class="string">'enjoy your day'</span>)
+
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> [price] = cost(n,p)
+
+    price = (n*p)+0.5*(n*p);
+    disp(<span class="string">'total amount to be paid'</span>)
+    disp(price)
+    disp(<span class="string">'thank you'</span>)
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Welcome
+Press any key to continue
+
+place =
+
+     1
+
+You clicked on North America
+
+x =
+
+     []
+
+
+y =
+
+  6&times;6 cell array
+
+  Columns 1 through 4
+
+    {'Company'          }    {'Class'   }    {'From'         }    {'Timings'}
+    {'Alaska Airlines'  }    {'Buisness'}    {'South America'}    {'"1200"' }
+    {'American Airlines'}    {'Economy' }    {'Asia'         }    {'"900"'  }
+    {'Delta Air Lines'  }    {'Economy' }    {'Australlia'   }    {'"1400"' }
+    {'Hawaiian Airlines'}    {'Buisness'}    {'Europe'       }    {'"2100"' }
+    {'JetBlue'          }    {'First'   }    {'North America'}    {'"1900"' }
+
+  Columns 5 through 6
+
+    {'Tickets Available'}    {'Price' }
+    {'"15"'             }    {'"3200"'}
+    {'"25"'             }    {'"1500"'}
+    {'"43"'             }    {'"1800"'}
+    {'"22"'             }    {'"3000"'}
+    {'"6"'              }    {'"5000"'}
+
+total amount to be paid
+        4200
+
+thank you
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+
+%Mini Project 
+
+%Airline Ticket Booking
+
+%BY LAKSHAY EEE 3rd Semester 
+
+
+disp("Welcome")
+disp("Press any key to continue")
+pause()
+place = menu('Select Destination','North America','South America','Asia','Europe','Australlia','Stay Home')
+
+switch place
+    
+    case 1
+        
+        disp("You clicked on North America")
+        [x,y] = xlsread('North America.xlsx')
+        prompt = {'Enter company name','Enter class','Enter your current place','enter number of tickets','enter price'};
+        title = 'Details';
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+        
+        %com = input('enter comapny name REPLACE_WITH_DASH_DASH> ','s')
+        %cls = input('enter class REPLACE_WITH_DASH_DASH> ','s')
+        %fr = input('enter your current place REPLACE_WITH_DASH_DASH> ','s')
+        %n = input('enter number of tickets REPLACE_WITH_DASH_DASH> ')
+        %prc = input('enter price REPLACE_WITH_DASH_DASH> ')
+        
+        cost(n,prc);
+        
+    case 2
+        
+        disp("You clicked on South America")
+        [x,y] = xlsread('South America.xlsx')
+        
+         prompt = {'Enter company name','Enter class','Enter your current place','enter number of tickets','enter price'};
+        title = 'Details';
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+       
+        
+        cost(n,prc);
+        
+    case 3
+        
+        disp("You clicked on Asia")
+        [x,y] = xlsread('Asia.xlsx')
+        
+        
+         prompt = {'Enter company name','Enter class','Enter your current place','enter number of tickets','enter price'};
+        title = 'Details';
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+        
+        cost(n,prc);
+        
+    case 4
+        
+        disp("You clicked on Europe")
+        [x,y] = xlsread('Europe.xlsx')
+        
+         prompt = {'Enter company name','Enter class','Enter your current place','enter number of tickets','enter price'};
+        title = 'Details';
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+        
+        cost(n,prc);
+        
+    case 5
+        
+        disp("You clicked on Australlia")
+        [x,y] = xlsread('Australlia.xlsx')
+        
+         prompt = {'Enter company name','Enter class','Enter your current place','enter number of tickets','enter price'};
+        title = 'Details';
+        answer = inputdlg(prompt,title);
+        com = (answer{1});
+        cls = (answer{2});
+        fr = (answer{3});
+        n = str2num(answer{4});
+        prc = str2num(answer{5});
+        
+        cost(n,prc);
+        
+    case 6
+        
+        error('You are staying Home')
+        
+    otherwise
+        
+        error('enjoy your day')
+
+end
+
+function [price] = cost(n,p)
+
+    price = (n*p)+0.5*(n*p);
+    disp('total amount to be paid')
+    disp(price)
+    disp('thank you')
+    
+end
+        
+##### SOURCE END #####
+--></body></html>

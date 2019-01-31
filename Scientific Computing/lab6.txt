@@ -1,0 +1,168 @@
+final_lab6
+RMS Value
+
+as =
+
+     []
+
+
+prompt =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number of numbers'}
+
+
+title =
+
+    'Number'
+
+
+answer =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'5'}
+
+
+prompt2 =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number'}
+
+
+title2 =
+
+    'Numbers'
+
+rms is
+    3.3166
+
+diary off
+final_lab6
+A_MEAN
+
+as =
+
+     []
+
+
+prompt =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number of numbers'}
+
+
+title =
+
+    'Number'
+
+
+answer =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'5'}
+
+
+prompt2 =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number'}
+
+
+title2 =
+
+    'Numbers'
+
+arithmetic mean is
+     3
+
+diary off
+final_lab6
+G_MEAN
+
+as =
+
+     []
+
+
+prompt =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number of numbers'}
+
+
+title =
+
+    'Number'
+
+
+answer =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'5'}
+
+
+prompt2 =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number'}
+
+
+title2 =
+
+    'Numbers'
+
+geometric mean is
+    2.6052
+
+diary off
+final_lab6
+H_MEAN
+
+as =
+
+     []
+
+
+prompt =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number of numbers'}
+
+
+title =
+
+    'Number'
+
+
+answer =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'5'}
+
+
+prompt2 =
+
+  1×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Enter the number'}
+
+
+title2 =
+
+    'Numbers'
+
+Harmonic mean is
+    2.1898
+
+diary off

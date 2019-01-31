@@ -1,0 +1,92 @@
+pwd
+
+ans =
+
+    'C:\Users\Ahsan\Desktop'
+
+mkdir test
+[Warning: Directory already exists.] 
+mkdir test2
+cd test2\
+cd ..
+pwd
+
+ans =
+
+    'C:\Users\Ahsan\Desktop'
+
+diary off
+uiimport
+uiimport
+alpha
+
+cdata
+
+  16×41×3 <a href="matlab:helpPopup uint8" style="font-weight:bold">uint8</a> array
+
+cdata(:,:,1) =
+
+diary off
+G=inline('x+0.05*x')
+
+G =
+
+     Inline function:
+     G(x) = x+0.05*x
+
+G(5)
+
+ans =
+
+    5.2500
+
+%anonymous function
+f=@(x,y)x^2-y^2
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x,y)x^2-y^2
+
+f(9)
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('@(x,y)x^2-y^2')" style="font-weight:bold">@(x,y)x^2-y^2</a>
+} 
+f(5,9)
+
+ans =
+
+   -56
+
+diary off
+diary off
+
+%different ways of executing functions
+>> exp4
+Not enough input arguments.
+
+Error in exp4 (line 3)
+    price = x+0.05*x;
+ 
+>> exp4(5)
+
+ans =
+
+    5.2500
+
+>> cost=exp4(5)
+
+cost =
+
+    5.2500
+
+
+
+
+ans =
+
+    'C:\Users\Ahsan\Desktop\html\exp4.html'
+
+diary off

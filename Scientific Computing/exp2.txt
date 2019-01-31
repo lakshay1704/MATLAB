@@ -1,0 +1,205 @@
+%exp2 to excercise array and matrix operations in matlab%
+%row vector%
+a=[9 8 7 6]
+
+a =
+
+     9     8     7     6
+
+%column matrix%
+b=[6;7;8;9]
+
+b =
+
+     6
+     7
+     8
+     9
+
+%Durer's Magic Square%
+D=[16 3 2 13;5 10 11 8;9 6 7 12;4 15 14 1]
+
+D =
+
+    16     3     2    13
+     5    10    11     8
+     9     6     7    12
+     4    15    14     1
+
+c=linspace(0,9,10)
+
+c =
+
+     0     1     2     3     4     5     6     7     8     9
+
+diary off
+d=[50:-5:10]
+
+d =
+
+    50    45    40    35    30    25    20    15    10
+
+e=logspace(1,3)
+
+e =
+
+   1.0e+03 *
+
+  Columns 1 through 12
+
+    0.0100    0.0110    0.0121    0.0133    0.0146    0.0160    0.0176    0.0193    0.0212    0.0233    0.0256    0.0281
+
+  Columns 13 through 24
+
+    0.0309    0.0339    0.0373    0.0409    0.0450    0.0494    0.0543    0.0596    0.0655    0.0720    0.0791    0.0869
+
+  Columns 25 through 36
+
+    0.0954    0.1048    0.1151    0.1265    0.1389    0.1526    0.1677    0.1842    0.2024    0.2223    0.2442    0.2683
+
+  Columns 37 through 48
+
+    0.2947    0.3237    0.3556    0.3907    0.4292    0.4715    0.5179    0.5690    0.6251    0.6866    0.7543    0.8286
+
+  Columns 49 through 50
+
+    0.9103    1.0000
+
+diary off
+x=logspace(1,3,5)
+
+x =
+
+   1.0e+03 *
+
+    0.0100    0.0316    0.1000    0.3162    1.0000
+
+a=[a;b]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.
+} 
+a=[a;6 7 8 9]
+
+a =
+
+     9     8     7     6
+     6     7     8     9
+
+
+b=[b [9;8;7;6]]
+
+b =
+
+     6     9
+     7     8
+     8     7
+     9     6
+
+z=eye(5,5)
+
+z =
+
+     1     0     0     0     0
+     0     1     0     0     0
+     0     0     1     0     0
+     0     0     0     1     0
+     0     0     0     0     1
+
+%Deleting elements from the matrix%
+z(:,1)=[]
+
+z =
+
+     0     0     0     0
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+%modifying elements in the matrix%
+z(4,4)=90
+
+z =
+
+     0     0     0     0
+     1     0     0     0
+     0     1     0     0
+     0     0     1    90
+     0     0     0     1
+
+size(a)
+
+ans =
+
+     2     4
+
+size(b)
+
+ans =
+
+     4     2
+
+%multiplying two matrix%
+Y=a*b
+
+Y =
+
+   220   230
+   230   220
+
+a
+
+a =
+
+     9     8     7     6
+     6     7     8     9
+
+c
+
+c =
+
+     0     1     2     3     4     5     6     7     8     9
+
+a1=eye(2,4)
+
+a1 =
+
+     1     0     0     0
+     0     1     0     0
+
+%array multiplication%
+a2=a.*a1
+
+a2 =
+
+     9     0     0     0
+     0     7     0     0
+
+diary off
+%matrix addition%
+a+a1
+
+ans =
+
+    10     8     7     6
+     6     8     8     9
+
+diary off
+R=rand(3,3)
+
+R =
+
+    0.8147    0.9134    0.2785
+    0.9058    0.6324    0.5469
+    0.1270    0.0975    0.9575
+
+R1=randn(3,3)
+
+R1 =
+
+    2.7694    0.7254   -0.2050
+   -1.3499   -0.0631   -0.1241
+    3.0349    0.7147    1.4897
+
+
+diary off

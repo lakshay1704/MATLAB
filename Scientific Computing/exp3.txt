@@ -1,0 +1,270 @@
+%interactive inputs and outputs
+%accepting input from the user
+%numeric input
+x=input('enter the value of x')
+enter the value of x5
+
+x =
+
+     5
+
+y=input('enter the value of y ')
+enter the value of y 6
+
+y =
+
+     6
+
+disp('the value of x + y is ')
+the value of x + y is 
+disp(x+y)
+    11
+
+%string input
+fn=input('enter your first name ','s')
+enter your first name Lakshay
+
+fn =
+
+    'Lakshay'
+
+disp('your first name is ')
+your first name is 
+disp(fn)
+Lakshay
+diary off
+%GUI Menu Generation
+options=menu('Fruits Name','Apple','Mango','Orange','Guava')
+
+options =
+
+     0
+
+options=menu('Fruits Name','Apple','Mango','Orange','Guava')
+
+options =
+
+     4
+
+diary off
+x=input('enter the number 10 ');
+enter the number 10 5
+clear x
+diary off
+for i=1:5
+disp('i')
+pause(2)
+disp('a pause')
+end
+i
+a pause
+i
+a pause
+i
+a pause
+i
+a pause
+i
+a pause
+for i=1:5
+disp('i')
+for i=1:5
+disp(i)
+disp('a pause of 2 seconds')
+pause(2)
+end
+     1
+
+a pause of 2 seconds
+     2
+
+a pause of 2 seconds
+     3
+
+a pause of 2 seconds
+     4
+
+a pause of 2 seconds
+     5
+
+a pause of 2 seconds
+for i=1:5
+disp('press any key to continue')
+pause()
+end
+press any key to continue
+press any key to continue
+press any key to continue
+press any key to continue
+press any key to continue
+for i=1:5
+disp('press any key to continue')
+pause()
+disp(i)
+end
+press any key to continue
+     1
+
+press any key to continue
+     2
+
+press any key to continue
+     3
+
+press any key to continue
+     4
+
+press any key to continue
+     5
+
+diary off
+name=['ram','rahul','ravi']
+
+name =
+
+    'ramrahulravi'
+
+name=["ram","rahul","ravi"]
+
+name = 
+
+  1×3 <a href="matlab:helpPopup string" style="font-weight:bold">string</a> array
+
+    "ram"    "rahul"    "ravi"
+
+name=["ram";"rahul";"ravi"]
+
+name = 
+
+  3×1 <a href="matlab:helpPopup string" style="font-weight:bold">string</a> array
+
+    "ram"
+    "rahul"
+    "ravi"
+
+name=['ram';'rahul';'ravi']
+{Dimensions of arrays being concatenated are not consistent.
+} 
+name=char['ram';'rahul';'ravi']
+ name=char['ram';'rahul';'ravi']
+          
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched
+delimiters.
+} 
+name=char('ram';'rahul';'ravi')
+ name=char('ram';'rahul';'ravi')
+                
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched
+delimiters.
+} 
+name=char('ram','rahul','ravi')
+
+name =
+
+  3×5 <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+    'ram  '
+    'rahul'
+    'ravi '
+
+diary off
+i=10;
+while i!=0
+ while i!=0
+        
+{Error: Invalid use of operator.
+} 
+i
+
+i =
+
+    10
+
+while i~=0
+i--
+ i--
+    
+{Error: Invalid expression. Check for missing or extra characters.
+} 
+while i~=0
+i-=1
+ i-=1
+   
+{Error: Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for equality, use '=='.
+} 
+while i~=0
+i=i-1
+disp('subtracting')
+end
+
+i =
+
+     9
+
+subtracting
+
+i =
+
+     8
+
+subtracting
+
+i =
+
+     7
+
+subtracting
+
+i =
+
+     6
+
+subtracting
+
+i =
+
+     5
+
+subtracting
+
+i =
+
+     4
+
+subtracting
+
+i =
+
+     3
+
+subtracting
+
+i =
+
+     2
+
+subtracting
+
+i =
+
+     1
+
+subtracting
+
+i =
+
+     0
+
+subtracting
+diary off
+%overlay plots
+theta=[0:pi/2:10]
+
+theta =
+
+         0    1.5708    3.1416    4.7124    6.2832    7.8540    9.4248
+
+plot(theta,sin(theta),'b--',theta,cos(theta),'g--')
+%subplots
+subplot(2,3,4),plot(theta,cos(theta))
+diary off
